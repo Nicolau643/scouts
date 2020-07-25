@@ -3,26 +3,151 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/Menu">
 
     <fragment
-        android:id="@+id/FirstFragment"
+        android:id="@+id/Menu"
         android:name="com.example.tesouraria.FirstFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_Menu_to_SecondFragment"
+            app:destination="@id/Activities" />
+        <action
+            android:id="@+id/action_Menu_to_activities"
+            app:destination="@id/Graphics" />
+        <action
+            android:id="@+id/action_Menu_to_year_cost"
+            app:destination="@id/Year_Costs" />
+        <action
+            android:id="@+id/action_Menu_to_tasks"
+            app:destination="@id/Tasks" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
+        android:id="@+id/Activities"
         android:name="com.example.tesouraria.SecondFragment"
-        android:label="@string/second_fragment_label"
+        android:label="@+string/Activities_label"
         tools:layout="@layout/fragment_second">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            app:destination="@id/Menu" />
+        <action
+            android:id="@+id/action_Activities_to_editCamping"
+            app:destination="@id/editCamping" />
+        <action
+            android:id="@+id/action_Activities_to_editCalendar"
+            app:destination="@id/editCalendar" >
+            <action
+                android:id="@+id/action_action_Activities_to_editCalendar_to_editOther"
+                app:destination="@id/editOther" />
+        </action>
+        <action
+            android:id="@+id/action_Activities_to_editOther"
+            app:destination="@id/editOther" >
+            <action
+                android:id="@+id/action_action_Activities_to_editOther_to_editFund"
+                app:destination="@id/editFund" />
+        </action>
+        <action
+            android:id="@+id/action_Activities_to_editFund"
+            app:destination="@id/editFund" />
     </fragment>
+
+
+    <fragment
+        android:id="@+id/Graphics"
+        android:name="com.example.tesouraria.GraphicsPage"
+        android:label="@+string/activities_label"
+        tools:layout="@layout/graph">
+
+        <action
+            android:id="@+id/action_graphics_to_Menu"
+            app:destination="@id/Menu" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/Year_Costs"
+        android:name="com.example.tesouraria.YearCosts"
+        android:label="@+string/year_cost_label"
+        tools:layout="@layout/year_cost">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_graphics"
+            app:destination="@id/Menu" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/Tasks"
+        android:name="com.example.tesouraria.Tasks"
+        android:label="@+string/tasks_label"
+        tools:layout="@layout/tasks">
+
+        <action
+            android:id="@+id/action_tasks_to_menu"
+            app:destination="@id/Menu" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/newActivity"
+        android:name="com.example.tesouraria.NewActivity"
+        android:label="@+string/newActivity_label"
+        tools:layout="@layout/new_activity">
+
+        <action
+            android:id="@+id/action_newActivity_to_Activities"
+            app:destination="@id/Activities" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/newCampingActivity"
+        android:name="com.example.tesouraria.NewCampingActivity"
+        android:label="@+string/newCampingActivity_label"
+        tools:layout="@layout/new_camping_activity">
+    </fragment>
+
+    <fragment
+        android:id="@+id/newFundsActivity"
+        android:name="com.example.tesouraria.NewFundsActivity"
+        android:label="@+string/newFundsActivity_label"
+        tools:layout="@layout/new_funds_activity">
+    </fragment>
+    <fragment
+        android:id="@+id/newCalendarsActivity"
+        android:name="com.example.tesouraria.NewCalendarsActivity"
+        android:label="@+string/newCalendarsActivity_label"
+        tools:layout="@layout/new_calendars_activity">
+    </fragment>
+    <fragment
+        android:id="@+id/newOtherActivity"
+        android:name="com.example.tesouraria.NewOtherActivity"
+        android:label="@+string/newOtherActivity_label"
+        tools:layout="@layout/new_other_activity">
+    </fragment>
+    <fragment
+        android:id="@+id/editCamping"
+        android:name="com.example.tesouraria.editCamping"
+        android:label="fragment_edit_camping"
+        tools:layout="@layout/fragment_edit_camping" />
+    <fragment
+        android:id="@+id/editFund"
+        android:name="com.example.tesouraria.EditFund"
+        android:label="fragment_edit_fund"
+        tools:layout="@layout/fragment_edit_fund" />
+    <fragment
+        android:id="@+id/editCalendar"
+        android:name="com.example.tesouraria.EditCalendar"
+        android:label="fragment_edit_calendar"
+        tools:layout="@layout/fragment_edit_calendar" />
+    <fragment
+        android:id="@+id/editOther"
+        android:name="com.example.tesouraria.EditOther"
+        android:label="fragment_edit_other"
+        tools:layout="@layout/fragment_edit_other" />
 </navigation>
