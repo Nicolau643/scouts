@@ -72,4 +72,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calendarsButton" />
 
+    <fragment
+        android:id="@+id/newActivityFragment"
+        android:name="com.example.tesouraria.NewCampingActivity"
+        android:layout_width="377dp"
+        android:layout_height="479dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginBottom="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

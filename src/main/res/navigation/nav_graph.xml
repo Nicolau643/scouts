@@ -30,30 +30,13 @@
         android:label="@+string/Activities_label"
         tools:layout="@layout/fragment_second">
 
+
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/Menu" />
-        <action
-            android:id="@+id/action_Activities_to_editCamping"
-            app:destination="@id/editCamping" />
-        <action
-            android:id="@+id/action_Activities_to_editCalendar"
-            app:destination="@id/editCalendar" >
-            <action
-                android:id="@+id/action_action_Activities_to_editCalendar_to_editOther"
-                app:destination="@id/editOther" />
-        </action>
-        <action
-            android:id="@+id/action_Activities_to_editOther"
-            app:destination="@id/editOther" >
-            <action
-                android:id="@+id/action_action_Activities_to_editOther_to_editFund"
-                app:destination="@id/editFund" />
-        </action>
-        <action
-            android:id="@+id/action_Activities_to_editFund"
-            app:destination="@id/editFund" />
+            android:id="@+id/action_Activities_to_activitiesMenu"
+            app:destination="@id/activitiesMenu" />
     </fragment>
+
+
 
 
     <fragment
@@ -150,4 +133,28 @@
         android:name="com.example.tesouraria.EditOther"
         android:label="fragment_edit_other"
         tools:layout="@layout/fragment_edit_other" />
+    <fragment
+        android:id="@+id/activitiesMenu"
+        android:name="com.example.tesouraria.ActivitiesMenu"
+        android:label="fragment_activities_menu"
+        tools:layout="@layout/fragment_activities_menu">
+
+
+    <action
+        android:id="@+id/action_Activities_to_editCamping"
+        app:destination="@id/editCamping" />
+    <action
+        android:id="@+id/action_Activities_to_editCalendar"
+        app:destination="@id/editCalendar" />
+
+
+    <action
+        android:id="@+id/action_Activities_to_editOther"
+        app:destination="@id/editOther" />
+
+
+    <action
+        android:id="@+id/action_Activities_to_editFund"
+        app:destination="@id/editFund" />
+    </fragment>
 </navigation>
